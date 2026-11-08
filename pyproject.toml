@@ -1,0 +1,34 @@
+[project]
+name = "piss-lang"
+version = "0.1.0"
+description = "piss - the world's most fluid programming language"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Tommy Falkowski" }]
+keywords = ["language", "interpreter", "fluid", "joke", "that-runs"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+[project.scripts]
+piss = "piss.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WismutHansen/piss"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["piss"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,16 @@
+# valves are functions. Puddles inside a valve evaporate on the same clock.
+valve double(n) {
+    flush n * 2
+}
+
+valve shout(text) {
+    flush text + "!!"
+}
+
+leak double(21)
+leak shout("piss")
+
+puddle nums = [1, 2, 3]
+drain nums n {
+    leak double(n)
+}

@@ -1,0 +1,15 @@
+# This program is CORRECT until the decay clock catches it.
+# Run it: piss run examples/evaporate.piss
+# Then:   piss run examples/evaporate.piss --decay 100
+puddle forgotten = "still here?"
+
+# Six statements of honest work go by. Nobody reads `forgotten`.
+puddle a = 1
+puddle b = a + 1
+puddle c = b + 1
+puddle d = c + 1
+puddle e = d + 1
+puddle f = e + 1
+
+leak a + b + c + d + e + f
+leak forgotten

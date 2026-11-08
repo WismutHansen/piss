@@ -1,0 +1,3 @@
+# hello, and the one rule that makes this language different.
+puddle greeting = "hello, world"
+leak greeting

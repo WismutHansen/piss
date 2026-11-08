@@ -1,0 +1,12 @@
+# No `while`. No `for`. Only `drain`, because water flows one way.
+drain range(1, 16) i {
+    if i % 15 == 0 {
+        leak "pissfizz"
+    } else if i % 3 == 0 {
+        leak "piss"
+    } else if i % 5 == 0 {
+        leak "fizz"
+    } else {
+        leak i
+    }
+}
